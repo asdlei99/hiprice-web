@@ -1,19 +1,16 @@
 # hiprice-web
 
-## Build Setup
+## Build
+```
+docker build -f Dockerfile -t hiprice-web .
 
-``` bash
-# install dependencies
-npm install
+// default CHATBOT_SERVER is hiprice-chatbot, either ip or domain is accepted
+docker build -f Dockerfile -t hiprice-web --build-arg CHATBOT_SERVER=192.168.1.100 .
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+// if you do not want to build yourself, a default image is ready in use
+docker pull wf2030/hiprice-web:0.1.0
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Env(used by `docker run`)
+- `HOST`: listening host, default is `0.0.0.0`
+- `PORT`: listening port, default is `8080`
