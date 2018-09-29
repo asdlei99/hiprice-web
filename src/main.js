@@ -11,7 +11,7 @@ import './store'
 Vue.use(Vuetify)
 
 Vue.prototype.$axios = Axios
-Axios.defaults.baseURL = 'http://' + process.env.CHATBOT_SERVER + '/web/api'
+Axios.defaults.baseURL = process.env.ENDPOINT
 Axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
 
 Vue.config.productionTip = false

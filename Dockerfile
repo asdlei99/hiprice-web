@@ -26,7 +26,7 @@ RUN yarn install && \
 
 WORKDIR /hiprice/web
 
-RUN mv index.html watchlist && \
+RUN mv index.html watchlist.html && \
     mv static/favicon.ico ../
 
 ENV HOST=0.0.0.0 \
