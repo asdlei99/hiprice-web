@@ -26,11 +26,10 @@ RUN yarn install && \
 
 WORKDIR /hiprice/web
 
-RUN mv index.html watchlist.html && \
-    mv static/favicon.ico ../
+RUN mv static/favicon.ico ../
 
 ENV HOST=0.0.0.0 \
-    PORT=8080
+    PORT=6100
 
 WORKDIR /hiprice
 

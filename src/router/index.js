@@ -7,26 +7,26 @@ import Settings from '@/components/Settings'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
-      path: '/',
-      redirect: '/web/watchlist'
-    },
-    {
-      path: '/web/watchlist',
+      path: '/watchlist',
       name: 'WatchList',
       component: WatchList
     },
     {
-      path: '/web/remind',
+      path: '/remind',
       name: 'Remind',
       component: Remind
     },
     {
-      path: '/web/settings',
+      path: '/settings',
       name: 'Settings',
       component: Settings
+    },
+    {
+      path: '/',
+      redirect: '/watchlist'
     }
   ]
 })

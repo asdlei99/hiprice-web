@@ -13,7 +13,7 @@ docker pull wf2030/hiprice-web:0.1.0
 
 ## Env(used by `docker run`)
 - `HOST`: listening host, default is `0.0.0.0`
-- `PORT`: listening port, default is `8080`
+- `PORT`: listening port, default is `6100`
 
 ## Run
-`docker run -d --name hiprice-web -p 8080:8080 hiprice-web`
+`docker run -d --name hiprice-web -p 6100:6100 hiprice-web`
