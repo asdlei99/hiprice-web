@@ -33,4 +33,4 @@ ENV HOST=0.0.0.0 \
 
 WORKDIR /hiprice
 
-ENTRYPOINT ["/bin/sh", "-c", "http-server", "-a", "$HOST", "-p", "$PORT"]
+ENTRYPOINT ["/bin/sh", "-c", "http-server", "-a", "$HOST", "-p", "$PORT", "-d", "false", "-s", "--cors", "--no-dotfiles"]

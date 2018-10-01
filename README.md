@@ -1,6 +1,7 @@
 # hiprice-web
+Web for Hiprice.
 
-## Build
+## Build Docker Image
 ```
 docker build -f Dockerfile -t hiprice-web .
 
@@ -15,5 +16,5 @@ docker pull wf2030/hiprice-web:0.1.0
 - `HOST`: listening host, default is `0.0.0.0`
 - `PORT`: listening port, default is `6100`
 
-## Run
+## Run In Docker
 `docker run -d --name hiprice-web -p 6100:6100 hiprice-web`
