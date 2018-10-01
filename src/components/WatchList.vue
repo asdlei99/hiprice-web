@@ -101,7 +101,10 @@
             this.empty = true
             return
           }
-          let arr = resp.data.data.products
+          let arr = null
+          if (resp.data.data && resp.data.data.products) {
+            arr = resp.data.data.products
+          }
           if (arr === null) {
             console.log('getWatchList returns null')
             this.empty = true

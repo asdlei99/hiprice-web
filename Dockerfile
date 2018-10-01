@@ -16,7 +16,7 @@ WORKDIR /hiprice
 
 RUN git clone https://github.com/kwf2030/hiprice-web.git src
 
-ARG CHATBOT_SERVER=hiprice-chatbot
+ARG CHATBOT_SERVER=localhost:6200
 
 WORKDIR /hiprice/src
 
