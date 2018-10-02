@@ -25,8 +25,8 @@ RUN yarn install && \
 
 WORKDIR /hiprice/web
 
-RUN mv static/favicon.ico /hiprice/ && \
-    mv static/help.html ../
+RUN mv static/favicon.ico ../ && \
+    mv static/help.html ./
 
 ENV HOST=0.0.0.0 \
     PORT=6100
