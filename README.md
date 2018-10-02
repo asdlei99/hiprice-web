@@ -24,17 +24,17 @@ Usually you should use previous step to build and deploy files to CDN, but for c
 
 ```
 // build
-docker build -f Dockerfile -t hiprice-web .
+docker image build -f Dockerfile -t hiprice-web .
 
 // default CHATBOT_SERVER is localhost:6200, either ip or domain is accepted,
 // if you want to use HiPrice out of localhost, a valid CHATBOT_SERVER must be specified.
-docker build -f Dockerfile -t hiprice-web --build-arg CHATBOT_SERVER=192.168.1.100 .
+docker image build -f Dockerfile -t hiprice-web --build-arg CHATBOT_SERVER=192.168.1.100 .
 
 // run
-docker run -d --name hiprice-web -p 6100:6100 hiprice-web
+docker container run -d --name hiprice-web -p 6100:6100 hiprice-web
 
 // if you do not want to build image yourself, a default image is ready in use
-docker run -d --name hiprice-web -p 6100:6100 wf2030/hiprice-web:0.1.0
+docker container run -d --name hiprice-web -p 6100:6100 wf2030/hiprice-web:0.1.0
 ```
 
 ### Env(used by `docker run`)
