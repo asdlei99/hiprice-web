@@ -5,7 +5,8 @@ Web for Hiprice.
 ```
 docker build -f Dockerfile -t hiprice-web .
 
-// default CHATBOT_SERVER is localhost:6200, either ip or domain is accepted
+// default CHATBOT_SERVER is localhost:6200, either ip or domain is accepted,
+// if you want to use HiPrice on phone or other devices, a valid CHATBOT_SERVER must be specified.
 docker build -f Dockerfile -t hiprice-web --build-arg CHATBOT_SERVER=192.168.1.100 .
 
 // if you do not want to build yourself, a default image is ready in use
