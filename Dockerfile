@@ -7,7 +7,6 @@ RUN echo http://mirrors.aliyun.com/alpine/v3.8/main > /etc/apk/repositories && \
     echo http://mirrors.aliyun.com/alpine/v3.8/community >> /etc/apk/repositories
 
 RUN apk update && \
-    apk upgrade && \
     apk add --no-cache git nodejs yarn && \
     yarn global add http-server && \
     mkdir -p /hiprice/web
@@ -33,4 +32,4 @@ ENV HOST=0.0.0.0 \
 
 WORKDIR /hiprice
 
-ENTRYPOINT ["/bin/sh", "-c", "http-server", "--cors", "-s", "-d", "false", "-a", "$HOST", "-p", "$PORT"]
+ENTRYPOINT ["/bin/sh", "-c", "http-server --cors -s -d false -a $HOST -p $PORT"]
