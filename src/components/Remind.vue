@@ -104,6 +104,8 @@
   import Bus from '../bus'
 
   export default {
+    name: 'Remind',
+
     data: () => ({
       product: global.Store.product,
       remind: {

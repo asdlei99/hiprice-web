@@ -30,6 +30,8 @@
   import Bus from '../bus'
 
   export default {
+    name: 'Settings',
+
     data: () => ({
       disturb: 0,
       showSnackbar: false,

@@ -1,5 +1,6 @@
 <template>
   <transition enter-active-class="animated slideInLeft">
+    <keep-alive include="WatchList">
     <v-layout column>
 
       <v-list two-line>
@@ -64,6 +65,7 @@
       </v-layout>
 
     </v-layout>
+    </keep-alive>
   </transition>
 </template>
 
@@ -71,6 +73,8 @@
   import Bus from '../bus'
 
   export default {
+    name: 'WatchList',
+
     data: () => ({
       empty: false,
       products: global.Store.products,
